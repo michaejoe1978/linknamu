@@ -1,9 +1,9 @@
 import { LinkItem, Profile } from "@/types/link";
 
 export const profile: Profile = {
-  name: "김프로",
-  bio: "세계 최강의 바이브 코더",
-  avatarUrl: "/avatar-placeholder.svg",
+  name: "김삼성",
+  bio: "시니어 개발자 | AX 에 관심이 많아요",
+  avatarUrl: "/profile.jpg",
 };
 
 export const links: LinkItem[] = [

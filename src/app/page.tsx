@@ -9,8 +9,8 @@ export default async function Home() {
   const links = await getLinks();
 
   return (
-    <div className="flex min-h-full flex-1 items-start justify-center bg-zinc-50 px-4 py-10 dark:bg-black sm:items-center sm:py-16">
-      <main className="flex w-full max-w-sm flex-col items-center gap-8 rounded-3xl border border-zinc-200 bg-white px-6 py-10 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+    <div className="flex min-h-full flex-1 items-start justify-center bg-gradient-to-b from-[#fffaf3] via-[#fef3e6] to-[#fbe4cf] px-5 py-14 dark:from-[#221a14] dark:via-[#1a1310] dark:to-[#120d0a] sm:items-center sm:px-8 sm:py-20">
+      <main className="flex w-full max-w-md flex-col items-center gap-10 sm:gap-12">
         <Profile {...profile} />
         <LinkList links={links} />
       </main>
