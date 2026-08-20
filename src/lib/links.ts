@@ -68,6 +68,18 @@ export async function getLinks(): Promise<LinkItem[]> {
   if (!collection) return readFallbackLinks();
 
   const docs = await collection.find().sort({ order: 1 }).toArray();
+  if (docs.length === 0) {
+    await collection.insertMany(
+      seedLinks.map((link, index) => ({
+        _id: new ObjectId(),
+        title: link.title,
+        url: link.url,
+        order: index,
+        clicks: 0,
+      }))
+    );
+    return getLinks();
+  }
   return docs.map(toLinkItem);
 }
 
